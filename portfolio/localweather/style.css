@@ -1,0 +1,81 @@
+.block {
+  margin: 0; }
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu+Mono");
+body, div {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #000428;
+  background: -webkit-linear-gradient(to bottom, #000428, #004e92);
+  background: -webkit-linear-gradient(top, #000428, #004e92);
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+  padding-top: 10%;
+  box-sizing: border-box; }
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+  .weather__error {
+    color: #f00;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1rem;
+    margin-bottom: 10px; }
+  .weather__location {
+    margin-bottom: 12px; }
+  .weather__city {
+    font-size: 3rem;
+    letter-spacing: 3px; }
+  .weather__coords {
+    font-size: .7rem; }
+  .weather__temp {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px; }
+  .weather__properties {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 18px; }
+  .weather__scale {
+    color: #fff;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline; }
+    .weather__scale:hover {
+      color: #cccccc;
+      text-decoration: none; }
+
+.icon {
+  width: 150px;
+  height: 150px;
+  fill: #fff; }
