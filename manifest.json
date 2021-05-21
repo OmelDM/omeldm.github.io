@@ -19,7 +19,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/game/home",
   "display": "fullscreen",
   "orientation": "portrait",
   "theme_color": "#1E2563",
