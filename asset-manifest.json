@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.31faefdc.chunk.css",
+    "main.js": "/static/js/main.9e7c0e37.chunk.js",
+    "main.js.map": "/static/js/main.9e7c0e37.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8c3b05b2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8c3b05b2.js.map",
+    "static/js/2.ecb3d032.chunk.js": "/static/js/2.ecb3d032.chunk.js",
+    "static/js/2.ecb3d032.chunk.js.map": "/static/js/2.ecb3d032.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/main.31faefdc.chunk.css.map": "/static/css/main.31faefdc.chunk.css.map",
+    "static/js/2.ecb3d032.chunk.js.LICENSE.txt": "/static/js/2.ecb3d032.chunk.js.LICENSE.txt",
+    "static/media/login-icon.9448850e.svg": "/static/media/login-icon.9448850e.svg",
+    "static/media/common.scss": "/static/media/raleway-semi-bold.0a42ae35.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c3b05b2.js",
+    "static/js/2.ecb3d032.chunk.js",
+    "static/css/main.31faefdc.chunk.css",
+    "static/js/main.9e7c0e37.chunk.js"
+  ]
+}
