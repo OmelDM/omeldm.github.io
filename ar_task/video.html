@@ -31,7 +31,7 @@ canvas, iframe {
 }
 </style>
 
-<iframe id='video_elem' src="https://player.vimeo.com/video/253989945?color=ef0800&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<iframe id='video_elem' src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 <script async src="js_3rdparty/artoolkit.debug.js"></script>
 <script src="js_3rdparty/artoolkit.api.js"></script>
@@ -41,11 +41,18 @@ canvas, iframe {
 
 <script>
 
+  const url = new URL(window.location.href);
+  const c = url.searchParams.get("videoSrc");
+  alert(c);
+var videoContentElement = document.getElementById('video_elem');
+    if (videoContentElement) {
+      videoContentElement.setAttribute('src', c);
+    }
+
 var stats = new Stats();
 stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
 document.body.appendChild( stats.dom );
 
-var videoContentElement = document.getElementById('video_elem');
 
 var video = document.createElement('video');
 video.playsInline = true;
