@@ -52,7 +52,7 @@ video.autoplay = true;
 
 document.body.appendChild(video);
 
-navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+// navigator.getUserMedia  = navigator.mediaDevices.getUserMedia;
 
 var tw = 1280 / 2;
 var th = 720 / 2;
@@ -66,8 +66,10 @@ var hdConstraints = {
     }
 };
 
-if (navigator.getUserMedia) {
-    navigator.getUserMedia(hdConstraints, success, errorCallback);
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia(hdConstraints)
+    .then(success)
+    .catch(errorCallback);
 } else {
     errorCallback('');
 }
