@@ -1,10 +1,14 @@
 <html>
 <body>
 <style>
-    body, html, video
+    body, html
     {
         margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden;
     }
+    /*video {*/
+    /*    width: 100%;*/
+    /*    min-height: 100vh;*/
+    /*}*/
 canvas, iframe {
     margin-left: 0px;
     margin-top: 0px;
@@ -57,8 +61,8 @@ var hdConstraints = {
     audio: false,
     video: {
         facingMode: 'environment',
-        width: window.screen.width,
-        height: window.screen.height,
+      // width: window.screen.width,
+      // height: window.screen.height,
     }
 };
 
