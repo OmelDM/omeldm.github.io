@@ -41,8 +41,9 @@ canvas, iframe {
 
 <script>
 
-  const url = new URL(window.location.href);
-  const c = url.searchParams.get("videoSrc");
+  const paramsString = window.location.search;
+  const searchParams = new URLSearchParams(paramsString);
+  const c = searchParams.get("videoSrc");
   alert(c);
 var videoContentElement = document.getElementById('video_elem');
     if (videoContentElement) {
