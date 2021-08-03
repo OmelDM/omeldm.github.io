@@ -23,7 +23,7 @@
             left: 0;
             width: 300px;
             height: 300px;
-            /*border: 0;*/
+            border: 0;
             transform-origin: 0 0;
             -webkit-transform-origin: 0 0;
             -moz-transform-origin: 0 0;
@@ -99,7 +99,7 @@
     }
   };
 
-  if (navigator.mediaDevices.getUserMedia) {
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia(hdConstraints)
       .then(success)
       .catch(errorCallback);
@@ -137,7 +137,7 @@
         if (!arController) {
           arController = new ARController(video, cameraParam);
 
-          arController.loadMarker('data/patt.spy', function (markerId) {
+          arController.loadMarker('data/pattern-006-spying.patt', function (markerId) {
             // console.log('Marker added: ' + markerId);
           });
         }
