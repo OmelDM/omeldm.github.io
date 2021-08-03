@@ -65,15 +65,18 @@
 <!--Uncomment to show Stats-->
 <!--<script src="js_3rdparty/stats.min.js"></script>-->
 <script src="js/pinnedCorners.js"></script>
-
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script>
   const paramsString = window.location.search;
   const searchParams = new URLSearchParams(paramsString);
   const videoSrc = searchParams.get("videoSrc");
   const videoContentElement = document.getElementById('video_elem');
+  let player = null;
   if (videoContentElement) {
     videoContentElement.setAttribute('src', videoSrc);
+    player = new Vimeo.Player(videoContentElement);
   }
+  let isVimeoVideoPlaying = false;
 
   // Uncomment to show Stats
   // const stats = new Stats();
@@ -162,8 +165,18 @@
             marker.vertex[rotatedOrder[3]][0], marker.vertex[rotatedOrder[3]][1],
             2);
           videoContentElement.style.opacity = "1";
+          if (!isVimeoVideoPlaying) {
+            player.play();
+            isVimeoVideoPlaying = true;
+            console.log('player.play()');
+          }
         } else {
           videoContentElement.style.opacity = "0";
+          if (isVimeoVideoPlaying) {
+            player.pause();
+            isVimeoVideoPlaying = false;
+            console.log('player.pause()');
+          }
         }
 
         // Uncomment to show Stats
