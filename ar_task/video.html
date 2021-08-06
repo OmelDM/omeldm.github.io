@@ -44,9 +44,13 @@
             justify-content: center;
         }
 
-        .video-container,
+        .video-container {
+            position: relative;
+        }
+
         #video-content {
             position: relative;
+            display: none;
         }
 
         .video-container video {
@@ -58,7 +62,7 @@
 <div class="content">
     <div id="video-container" class="video-container">
         <div id="video-content">
-            <iframe id='video_elem' src=""></iframe>
+            <iframe id='video_elem' src="" allow="autoplay;"></iframe>
         </div>
     </div>
 </div>
