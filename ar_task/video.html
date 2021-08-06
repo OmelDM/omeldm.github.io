@@ -75,7 +75,7 @@
   const videoContentElement = document.getElementById('video_elem');
   let player = null;
   if (videoContentElement) {
-    videoContentElement.setAttribute('src', videoSrc + '?controls=0&loop=1');
+    videoContentElement.setAttribute('src', videoSrc + '?controls=0&loop=1&muted=1');
     player = new Vimeo.Player(videoContentElement);
   }
   let isVimeoVideoPlaying = false;
