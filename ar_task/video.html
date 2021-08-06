@@ -71,11 +71,10 @@
   const paramsString = window.location.search;
   const searchParams = new URLSearchParams(paramsString);
   const videoSrc = searchParams.get("videoSrc");
-  alert(videoSrc)
   const videoContentElement = document.getElementById('video_elem');
   let player = null;
   if (videoContentElement) {
-    videoContentElement.setAttribute('src', videoSrc + '?controls=0&loop=1&muted=1');
+    videoContentElement.setAttribute('src', 'https://player.vimeo.com/video/145327714' + '?controls=1&loop=1&muted=1');
     player = new Vimeo.Player(videoContentElement);
   }
   let isVimeoVideoPlaying = false;
